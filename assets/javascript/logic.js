@@ -1,4 +1,4 @@
-$(document).ready(function() {
+
               // This example adds a search box to a map, using the Google Place Autocomplete
               // feature. People can enter geographical searches. The search box will return a
               // pick list containing a mix of places and predicted search terms.
@@ -74,37 +74,3 @@ $(document).ready(function() {
                 });
               }
         
-
-
-
-
-
-    //var queryURL = "https://newsapi.org/v2/top-headlines?country=us&apiKey=c3c56561b15f423f8748a3b782996fd3";       
-
-var topic = $("#location-name-input").val().trim();
-
-    $.ajax({
-        method: 'GET',
-        url: 'https://cors-anywhere.herokuapp.com/' + 'https://newsapi.org/v2/top-headlines?country=us&apiKey=c3c56561b15f423f8748a3b782996fd3'
-    }).then(function(data) {
-      console.log(data);
-
-      $("body").on("click", "button", function() {
-        event.preventDefault();
-      
-        console.log("You searched" + topic);
-      
-      });
-
-      $("#newsDisplay").text("hello news will go here");
-      var results = data.data;
-
-      
-
-    });
-
-      console.log("THIS NEWS API ACTUALLY WORKS?!?!");
-
-    
-      initAutocomplete()
-});
