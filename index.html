@@ -1,74 +1,95 @@
 <html>
-    <head>
 
-        <meta charset="UTF-8">
+<head>
 
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        
-        <!-- Firebase -->
-        <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-        
-        <script type="text/javascript" src="assets/javascript/logic.js"></script>
 
-        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-        <meta charset="utf-8">
-        <title>Paranormal ApptivityTest</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsKmmjgGZlIljzHc0RnoCNSPXPagiTMVA&libraries=places&callback=initAutocomplete"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <script type="text/javascript" src="assets/javascript/logic.js"></script>
+    <script type="text/javascript" src="assets/javascript/newsAPI.js"></script>
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Paranormal ApptivityTest</title>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsKmmjgGZlIljzHc0RnoCNSPXPagiTMVA&libraries=places&callback=initAutocomplete"
         async defer></script>
-    
-    </head>
 
-    
+</head>
 
-    <body>
-            <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-            <div id="map"></div>
-           
-            
+
+
+<body>
+    <div class="container">
+
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+        <div id="map"></div>
+
+
 
         <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              
+
+
             <h1 class="display-4">Paranormal Activity</h1>
 
             <p class="lead">Your favorite tool for UFO gazing, ghost hunting, and more! </p>
-      
+
+        </div>
+
+        <div id="buttonsArea">Suggestions:&nbsp;</div>
+
+
+        <br>
+        <br>
+
+
+        <form>
+
+            <div class="form-group">
+                <label for="zip-input">Zip Code</label>
+                <input type="zip" class="form-control" id="zip-input" placeholder="12345">
+
             </div>
-        </div>
 
+            <div class="form-group">
+                <label for="location-name-input">Location Name</label>
+                <input type="name" class="form-control" id="location-name-input" placeholder="Haunted Place">
+            </div>
 
-        <div class="container">
-            <form>
-        
-                <div class="form-group">
-                    <label for="zip-input">Zip Code</label>
-                    <input type="zip" class="form-control" id="zip-input" placeholder="12345">
-                    
-                </div>
-        
-                <div class="form-group">
-                    <label for="location-name-input">Location Name</label>
-                    <input type="name" class="form-control" id="location-name-input" placeholder="Haunted Place">
-                </div>
-              
-                <!--Submit button-->
-                <button type="submit" class="btn btn-primary" id="search">Search</button>
-            </form>
-        </div>
-
-        <div id="newsDisplay"></div>
+            <!--Submit button-->
+            <button type="submit" class="btn btn-primary" id="search">Search</button>
+        </form>
 
 
 
+        <div id="newsDisplay"> News displays here</div>
+
+
+
+        <ul class="list-group">
+
+        </ul>
+
+
+        <br>
+        <br>
+        <br>
 
 
 
 
-    </body>
+
+
+    </div>
+</body>
+
 </html>
