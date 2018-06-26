@@ -10,19 +10,18 @@ var queryURL = "https://newsapi.org/v2/top-headlines?country=au&category=" + "sc
             console.log(response);
     
             
-               // <li class="list-group-item">Cras justo odio</li>
-               // <li class="list-group-item">Dapibus ac facilisis in</li>
-               // <li class="list-group-item">Morbi leo risus</li>
-               // <li class="list-group-item">Porta ac consectetur ac</li>
-               // <li class="list-group-item">Vestibulum at eros</li>
+               // <li class="list-group-item"><a href>Cras justo odio</li>
+               
+
 
 
             var results = response.articles;
             for (var i = 0; i < results.length; i++) {
-                var listItem = $("<li>", {class:'list-group-item'});
-                listItem.text("Result: " + results[i].title);
+                var listItem = $("<a href></a>", {class:'list-group-item'});
+                listItem.text(results[i].title);
+                $(listItem).attr("href", results[i].url);
                 $(".list-group").append(listItem);
-                console.log(listItem);
+                console.log(listItem.href);
 
 
                 
@@ -52,31 +51,7 @@ $(document).ready(function() {
 
     $("body").on("click", "button", function() { 
                
-    
-
-    //When the AJAX request is copmplete,
-    $.ajax({
-    url: queryURL,
-    method: "GET"
-    }).then(function(response) {
-        console.log(response);
-
-        var results = response.articles;
-        for (var i = 0; i < results.length; i++) {
-            var p = $("<p>").text("ArticleOne: " + articles[i].source);
-            $("#p").html("testing" + p);
-
-            var something = $("<div>");
-            var article2 = something.attr("src", articles[i].source);
-
-            cuteImage.attr("data-state", "still");
-
-            $("#newsDisplay").append(p, something);
-         
-          }
-          
-
-    });
+    console.log("searching something");
 
     
 });
