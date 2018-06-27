@@ -24,7 +24,7 @@ $(document).ready(function() {
     console.log("search Button clicked");
 
     var userInput = $("#location-name-input").val().trim();
-    var queryURL = "https://newsapi.org/v2/everything?q=" + userInput + "&apiKey=c3c56561b15f423f8748a3b782996fd3";   
+    var queryURL = "https://newsapi.org/v2/everything?category=science&q=" + userInput + "&apiKey=c3c56561b15f423f8748a3b782996fd3";   
         console.log(userInput);
         console.log(queryURL);
 
@@ -41,16 +41,12 @@ $(document).ready(function() {
             //displays articles in the list
             var results = response.articles;
             for (var i = 0; i < results.length; i++) {
-                var listItem = $("<a href></a>", {class:'list-group-item'});
+                var listItem = $("<a href target='_blank'></a>", {class:'list-group-item'});
                 listItem.text(results[i].title);
                 $(listItem).attr("href", results[i].url);
                 $(".list-group").append(listItem);
                 console.log(listItem.href);
-
-
-                
-
-             
+                         
             }
     });
     $("#location-name-input").val(""); //Clears the keyword input field
