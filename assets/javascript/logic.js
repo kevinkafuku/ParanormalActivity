@@ -6,24 +6,66 @@
 // parameter when you first load the API. For example:
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
+//Add Ghost Niko
+var ghost = "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
+
 function initAutocomplete() {
 var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -33.8688, lng: 151.2195},
-    zoom: 13,
+    center: {lat: 37.0902, lng: -95.7129},
+    zoom: 4,
     mapTypeId: 'roadmap'
 });
 
 // Create the search box and link it to the UI element.
-var input = document.getElementById('pac-input');
+var input = document.getElementById('location-name-input');
 var searchBox = new google.maps.places.SearchBox(input);
-map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+map.controls[google.maps.ControlPosition.TOP_LEFT].push(""); //For some reason, deleting this line breaks the code?
 
 // Bias the SearchBox results towards current map's viewport.
-map.addListener('bounds_changed', function() {
-    searchBox.setBounds(map.getBounds());
-});
+//map.addListener('bounds_changed', function() {
+//    searchBox.setBounds(map.getBounds());
+//});
 
-var markers = [];
+//Add Kevin's Kool Koordinates
+var markers = [
+    {coords:{lat:38.7395, lng:-89.6712}, iconImage:ghost, content:"<h3>Southern Illinois UFO Triangle</h3> Highland, Illinois"},
+    {coords:{lat:33.6198, lng:-86.6089}, iconImage:ghost, content:"<h3>Wampus Cat</h3> Truusville, Alabama"},
+    {coords:{lat:32.8649, lng:-84.8541}, iconImage:ghost,content:"<h3>Beaver Shark</h3> Pine Mountain, Georgia"},
+    {coords:{lat:31.3852, lng:-83.22299}, iconImage:ghost,
+    content:"<h3>Hogzilla</h3> Alpaha, Georgia "}
+];
+
+//loop through markers
+for (var i = 0; i < markers.length; i++){
+    addMarker(markers[i]);
+    } console.log("test 2");
+
+        // Add Marker Function
+    function addMarker(props){
+        var marker = new google.maps.Marker({
+        position:props.coords,
+        map:map,
+        icon:props.iconImage
+        });
+        //check for custom icon
+        
+        if (props.iconImage) {
+        //set icon image
+        marker.setIcon(props.iconImage);
+        }
+
+        //check content
+        if (props.content) {
+        var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+        });
+
+        marker.addListener("click", function(){
+            infoWindow.open(map, marker);
+        });
+        }
+    }
+
 // Listen for the event fired when the user selects a prediction and retrieve
 // more details for that place.
 searchBox.addListener('places_changed', function() {
@@ -34,10 +76,10 @@ searchBox.addListener('places_changed', function() {
     }
 
     // Clear out the old markers.
-    markers.forEach(function(marker) {
-    marker.setMap(null);
-    });
-    markers = [];
+    //markers.forEach(function(marker) {
+    //marker.setMap(null);
+    //});
+    //markers = [];
 
     // For each place, get the icon, name and location.
     var bounds = new google.maps.LatLngBounds();
@@ -47,7 +89,7 @@ searchBox.addListener('places_changed', function() {
         return;
     }
     var icon = {
-        url: place.icon,
+        url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
         size: new google.maps.Size(71, 71),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),
