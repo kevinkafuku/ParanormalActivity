@@ -24,7 +24,7 @@ $(document).ready(function() {
     console.log("search Button clicked");
 
     var userInput = $("#location-name-input").val().trim();
-    var queryURL = "https://newsapi.org/v2/everything?category=science&q=" + userInput + "&apiKey=c3c56561b15f423f8748a3b782996fd3";   
+    var queryURL = "https://newsapi.org/v2/everything?q=paranormal " + userInput + "&apiKey=c3c56561b15f423f8748a3b782996fd3";   
         console.log(userInput);
         console.log(queryURL);
 
