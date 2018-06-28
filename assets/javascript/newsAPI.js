@@ -23,7 +23,13 @@ $(document).ready(function() {
     event.preventDefault();
     console.log("search Button clicked");
 
-    var userInput = $("#location-name-input").val().trim();
+    var userInput = $("#article-name-input").val().trim();
+    
+    //Currently not working because Google forces spaces into the string and ruins the URL
+    //var userInpu2 = $("#article-name-input").val().trim();
+
+
+    
     var queryURL = "https://newsapi.org/v2/everything?q=paranormal " + userInput + "&apiKey=c3c56561b15f423f8748a3b782996fd3";   
         console.log(userInput);
         console.log(queryURL);
@@ -49,7 +55,7 @@ $(document).ready(function() {
                          
             }
     });
-    $("#location-name-input").val(""); //Clears the keyword input field
+    $("#article-name-input").val(""); //Clears the keyword input field
     $("#article-display").html(""); //Clears the article display
 
                
