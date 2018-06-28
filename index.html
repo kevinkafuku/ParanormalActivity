@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+
+    <meta charset="UTF-8">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+
+    <script type="text/javascript" src="assets/javascript/logic.js"></script>
+    <script type="text/javascript" src="assets/javascript/newsAPI.js"></script>
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Paranormal MaptivityTest</title>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsKmmjgGZlIljzHc0RnoCNSPXPagiTMVA&libraries=places&callback=initAutocomplete"
+    async defer></script>
+
+    <script src="https://use.fontawesome.com/c5276a2885.js"></script>
+
+
+
+
+</head>
+
+
+
+<body>
+    <div class="container">
+
+        <div id="map"></div>
+
+
+
+        <div class="jumbotron jumbotron-fluid">
+
+
+            <h1 class="display-4">Paranormal Maptivity</h1>
+
+            <p class="lead">Your favorite tool for UFO gazing, ghost hunting, and more! </p>
+
+        </div>
+
+        <div id="buttonsArea">Not sure what to search for? Try one of these!<br></div>
+
+
+        <br>
+        <br>
+
+
+        <form>
+            
+
+            <div class="form-group">
+                <label for="location-name-input">What are you looking for?</label>
+                <input type="name" class="form-control" id="location-name-input" placeholder="Haunted Happenings and/or Spooky Locations">
+            </div>
+
+            <!--Submit button-->
+            <button type="submit" class="btn btn-primary" id="search">Search</button>
+        </form>
+
+
+
+        <div id="newsDisplay">ARTICLES:
+        
+            <ul class="list-group" id="article-display">     
+
+            </ul>
+
+            <br>
+            <br>
+            <br>
+            <i class="fa fa-external-link-square" aria-hidden="true"></i>
+            <i class="fa fa-external-link-square" aria-hidden="true">hello</i>
+
+            <i class="fa fa-external-link-square" aria-hidden="true"></i>
+
+        </div>
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>

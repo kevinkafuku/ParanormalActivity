@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="assets/javascript/app.js"></script>
+  <title>Paranormal Apptivity</title>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+    function initMap(){
+      var options = {
+        zoom: 5,
+        center:{lat:37.0902, lng:-95.7129}
+      }
+
+      var map = new google.maps.Map(document.getElementById("map"), options);
+
+      var markers = [
+        {
+      coords:{lat:38.7395, lng:-89.6712},
+        iconImage:"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+        content:"<h1>Southern Illinois UFO Triangle<h1> Highland, Illinois"
+        },
+        {
+      coords:{lat:33.6198, lng:-86.6089},
+        iconImage:"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+        content:"<h1>Wampus Cat<h1> Truusville, Alabama"
+        },
+        {
+      coords:{lat:32.8649, lng:-84.8541},
+        iconImage:"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+        content:"<h1>Beaver Shark<h1> Pine Mountain, Georgia"
+        },
+        {
+      coords:{lat:31.3852, lng:-83.22299},
+        iconImage:"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+        content:"<h1>Hogzilla<h1> Alpaha, Georgia "
+        },
+        {
+      coords:{lat:31.1344, lng:-82.4753},
+        iconImage:"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+        content:"<h1>Big Foot Attack<h1> Ware County Georgia"
+        },
+        {
+      coords:{lat:31.1500, lng:-81.4915},
+        iconImage:"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+        content:"<h1>Altamaha / Alti<h1> Brunswick, Georgia"
+        },
+        {
+      coords:{lat:29.8440, lng:-81.2712},
+        iconImage:"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+        content:"<h1>Globster St.Augustine Monster<h1> St.Augustine Beach, Florida"
+        },
+        {
+      coords:{lat:41.8781, lng:-87.6298},
+        iconImage:"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+        content:"<h1>Ex navy man spots 8 UFO Spears<h1> Chicago, Illinois"
+        },
+        {
+      coords:{lat:41.5731, lng:-87.7933},
+        iconImage:"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+        content:"<h1>The Tinley Park Lights<h1> Tinley Park, Illinois"
+        },
+        {
+      coords:{lat:41.6172, lng:-72.0851},
+        iconImage:"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+        content:"<h1>Family's Alien Abduction<h1> Baltic, Connecticut"
+        },
+        {
+      coords:{lat:39.7391, lng:-75.5398},
+        iconImage:"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+        content:"<h1>Blue Glowing UFO in Delaware Skies<h1> Wilmington, Delaware"
+        },
+        {
+      coords:{lat:33.4484, lng:-112.0740},
+        iconImage:"https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+        content:"<h1>Dreamy Draw UFO<h1> Wilmington, Delaware"
+        },
+      ];
+
+
+//loop through markers
+for (var i = 0; i < markers.length; i++){
+  addMarker(markers[i]);
+}
+
+      // Add Marker Function
+  function addMarker(props){
+    var marker = new google.maps.Marker({
+      position:props.coords,
+      map:map,
+      icon:props.iconImage
+    });
+    //check for custom icon
+    
+    if (props.iconImage) {
+      //set icon image
+      marker.setIcon(props.iconImage);
+    }
+
+    //check content
+    if (props.content) {
+      var infoWindow = new google.maps.InfoWindow({
+        content:props.content
+      });
+
+      marker.addListener("click", function(){
+        infoWindow.open(map, marker);
+      });
+    }
+  }
+}
+
+//loop through array, compare whether or not user input data matches coordinates in array, if does match, button call change coordinates
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA67GMArz47Ff1Km-iWVr4QKVUYeVvWOCw&callback=initMap">
+  </script>
+</body>
+</html>
