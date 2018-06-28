@@ -68,13 +68,14 @@ for (var i = 0; i < markers.length; i++){
     }
 
 // Listen for the event fired when the user selects a prediction and retrieve
-// more details for that place.
+// more details for that place. CHANGE
 searchBox.addListener('places_changed', function() {
     var places = searchBox.getPlaces();
 
     if (places.length == 0) {
     return;
     }
+    
 
     // Clear out the old markers.
     //markers.forEach(function(marker) {

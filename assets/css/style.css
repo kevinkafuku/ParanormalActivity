@@ -39,10 +39,10 @@
     font-family: Roboto;
     }
 
-    #pac-container {
+    /*#pac-container {
     padding-bottom: 12px;
     margin-right: 12px;
-    }
+    }*/
 
     .pac-controls {
     display: inline-block;
