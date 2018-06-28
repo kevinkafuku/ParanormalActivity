@@ -7,7 +7,8 @@
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
 //Add Ghost Niko
-var ghost = "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
+var icon = "https://www.floridahauntedhouses.com/images/map/ghost_24x43_on.png";
+
 
 function initAutocomplete() {
 var map = new google.maps.Map(document.getElementById('map'), {
@@ -28,10 +29,10 @@ map.controls[google.maps.ControlPosition.TOP_LEFT].push(""); //For some reason, 
 
 //Add Kevin's Kool Koordinates
 var markers = [
-    {coords:{lat:38.7395, lng:-89.6712}, iconImage:ghost, content:"<h3>Southern Illinois UFO Triangle</h3> Highland, Illinois"},
-    {coords:{lat:33.6198, lng:-86.6089}, iconImage:ghost, content:"<h3>Wampus Cat</h3> Truusville, Alabama"},
-    {coords:{lat:32.8649, lng:-84.8541}, iconImage:ghost,content:"<h3>Beaver Shark</h3> Pine Mountain, Georgia"},
-    {coords:{lat:31.3852, lng:-83.22299}, iconImage:ghost,
+    {coords:{lat:38.7395, lng:-89.6712}, iconImage:icon, content:"<h3>Southern Illinois UFO Triangle</h3> Highland, Illinois"},
+    {coords:{lat:33.6198, lng:-86.6089}, iconImage:icon, content:"<h3>Wampus Cat</h3> Truusville, Alabama"},
+    {coords:{lat:32.8649, lng:-84.8541}, iconImage:icon,content:"<h3>Beaver Shark</h3> Pine Mountain, Georgia"},
+    {coords:{lat:31.3852, lng:-83.22299}, iconImage:icon,
     content:"<h3>Hogzilla</h3> Alpaha, Georgia "}
 ];
 
@@ -88,13 +89,6 @@ searchBox.addListener('places_changed', function() {
         console.log("Returned place contains no geometry");
         return;
     }
-    var icon = {
-        url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-        size: new google.maps.Size(71, 71),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25)
-    };
 
     // Create a marker for each place.
     markers.push(new google.maps.Marker({
@@ -116,6 +110,5 @@ searchBox.addListener('places_changed', function() {
 
 
 }
-
 
 
