@@ -1,4 +1,4 @@
-var keywords = ["aliens", "paranormal", "ghosts", "bigfoot"];
+var keywords = ["aliens", "paranormal", "ghosts", "bigfoot", "area 51", "Roswell", "UFO", ""];
 
 
 
