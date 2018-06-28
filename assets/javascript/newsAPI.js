@@ -25,8 +25,7 @@ $(document).ready(function() {
 
     var userInput = $("#article-name-input").val().trim();
     
-    //Currently not working because Google forces spaces into the string and ruins the URL
-    //var userInpu2 = $("#article-name-input").val().trim();
+    var userInputWithLoc = $("#article-name-input").val().trim();
 
 
     
