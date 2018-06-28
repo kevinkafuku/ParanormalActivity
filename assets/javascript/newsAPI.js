@@ -1,4 +1,4 @@
-var keywords = ["aliens", "paranormal", "ghosts", "bigfoot", "area 51", "Roswell", "UFO", ""];
+var keywords = ["aliens", "paranormal", "ghosts", "bigfoot", "area 51", "Roswell", "UFO",];
 
 
 
@@ -49,6 +49,7 @@ $(document).ready(function() {
                 var listItem = $("<a href target='_blank'></a>", {class:'list-group-item'});
                 listItem.text(results[i].title);
                 $(listItem).attr("href", results[i].url);
+                $(listItem).css("color", "white");
                 $(".list-group").append(listItem);
                 console.log(listItem.href);
                          

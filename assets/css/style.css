@@ -1,8 +1,48 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/80/1e/ba/801ebab2b7afe9afdaf72e2272a67a5d.gif");
+    background-size: 100%;
+    font-family: 'Eater', cursive;
+}
+.display-4 {
+    color: white;
+}
+.lead { color: white;
 
+}
+
+#places {
+    color: white;
+}
+
+#articles {
+    color:white;
+}
+
+#newsDisplay {
+    margin: auto;
+}
+
+#buttonsArea {
+    margin: auto;
+}
+
+#search {
+    background-color: black;
+    color: white;
+}
+
+#location-name-input {
+    background-color: black;
+}
+
+#article-name-input {
+    background-color: black;
+}
     /* Always set the map height explicitly to define the size of the div
     * element that contains the map. */
     #map {
-    height: 100%;
+    width: 100%;
+    height: 300px;
     }
     /* Optional: Makes the sample page fill the window. */
     html, body {
@@ -14,6 +54,9 @@
     font-family: Roboto;
     font-size: 15px;
     font-weight: 300;
+    }
+    h4 {
+        color:white;
     }
 
     #infowindow-content .title {
@@ -82,4 +125,8 @@
     #target {
     width: 345px;
     }
+<<<<<<< HEAD
+>>>>>>> c4c554b7576b61854f75ac204a0add8501040ca4
+=======
 
+>>>>>>> 82847867a41c2ad930b1530ded2b1edf9802e3ce
