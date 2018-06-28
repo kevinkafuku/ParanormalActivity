@@ -22,10 +22,8 @@
     <meta charset="utf-8">
     <title>Paranormal MaptivityTest</title>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsKmmjgGZlIljzHc0RnoCNSPXPagiTMVA&libraries=places&callback=initAutocomplete&types=(cities)"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsKmmjgGZlIljzHc0RnoCNSPXPagiTMVA&libraries=places&callback=initAutocomplete"
     async defer></script>
-    https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Vict&types=(cities)&language=pt_BR&key=YOUR_API_KEY
-
 
     <script src="https://use.fontawesome.com/c5276a2885.js"></script>
 
@@ -39,7 +37,6 @@
 <body>
     <div class="container">
 
-        <div id="map"></div>
 
 
 
@@ -48,11 +45,9 @@
 
             <h1 class="display-4">Paranormal Maptivity</h1>
 
-            <p class="lead">Your favorite tool for UFO gazing, ghost hunting, and more! </p>
+            <p class="lead">Your favorite tool for UFO chasing, ghost hunting, and more! </p>
 
         </div>
-
-        <div id="buttonsArea">Not sure what to search for? Try one of these!<br></div>
 
 
         <br>
@@ -61,14 +56,32 @@
 
         <form>
             
-            <div class="form-group" id="articles"> &nbsp;
-                <label for="location-name-input">Where are you looking?</label>
-                <input type="name" class="form-control" id="location-name-input" placeholder="Spooky Locations">
-            </div>
+
             <div class="form-group" id="places">
                     <label for="article-name-input">What are you looking for?</label>
-                    <input type="name" class="form-control" id="article-name-input" placeholder="Haunted Happeningss">
+                    <input type="name" class="form-control" id="article-name-input" placeholder="Haunted Happenings">
+            </div>
+
+            Search Results:
+            <div id="newsDisplay" class="border border-warning rounded" >
+        
+                    <ul class="list-group" id="article-display">     
+        
+                    </ul>
+        
+                    <br>
+                    <br>
+                    <br>
+
+        
                 </div>
+                <br>
+                <br>
+
+            <div class="form-group" id="articles">
+                    <label for="location-name-input">Did you read about something cool? Find out how to get there!</label>
+                    <input type="name" class="form-control" id="location-name-input" placeholder="POI, City, State, Zip">
+            </div>
 
             <!--Submit button-->
             <button type="submit" class="btn btn-primary" id="search">Search</button>
@@ -76,23 +89,10 @@
 
 
 
-        <div id="newsDisplay">ARTICLES:
-        
-            <ul class="list-group" id="article-display">     
-
-            </ul>
-
-            <br>
-            <br>
-            <br>
-            <i class="fa fa-external-link-square" aria-hidden="true">Lori</i>
-            <i class="fa fa-external-link-square" aria-hidden="true">Nick</i>
-            <i class="fa fa-external-link-square" aria-hidden="true">Valerie</i>
-            <i class="fa fa-external-link-square" aria-hidden="true">Kevin</i>
-
-        </div>
 
 
+
+        <div id="map"></div>
 
 
 
