@@ -50,6 +50,7 @@ $(document).ready(function() {
                 var listItem = $("<a href target='_blank'></a>", {class:'list-group-item'});
                 listItem.text(results[i].title);
                 $(listItem).attr("href", results[i].url);
+                $(listItem).css("color", "white")
                 $(".list-group").append(listItem);
                 console.log(listItem.href);
                          

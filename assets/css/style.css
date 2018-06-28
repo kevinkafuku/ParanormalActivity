@@ -1,3 +1,30 @@
+    body {
+        background-image: url("https://i.pinimg.com/originals/80/1e/ba/801ebab2b7afe9afdaf72e2272a67a5d.gif");
+        background-size: 100%;
+        color: white;
+        font-family: 'Eater', cursive;
+    }
+
+    #newsDisplay {
+        margin: auto;
+    }
+
+    #buttonsArea {
+        margin: auto;
+    }
+
+    #search {
+        background-color: black;
+        color: white;
+    }
+
+    #location-name-input {
+        background-color: black;
+    }
+
+    #article-name-input {
+        background-color: black;
+    }
     /* Always set the map height explicitly to define the size of the div
     * element that contains the map. */
     #map {
@@ -82,4 +109,3 @@
     #target {
     width: 345px;
     }
->>>>>>> c4c554b7576b61854f75ac204a0add8501040ca4

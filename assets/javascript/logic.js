@@ -29,11 +29,27 @@ map.controls[google.maps.ControlPosition.TOP_LEFT].push(""); //For some reason, 
 
 //Add Kevin's Kool Koordinates
 var markers = [
-    {coords:{lat:38.7395, lng:-89.6712}, iconImage:icon, content:"<h3>Southern Illinois UFO Triangle</h3> Highland, Illinois"},
-    {coords:{lat:33.6198, lng:-86.6089}, iconImage:icon, content:"<h3>Wampus Cat</h3> Truusville, Alabama"},
-    {coords:{lat:32.8649, lng:-84.8541}, iconImage:icon,content:"<h3>Beaver Shark</h3> Pine Mountain, Georgia"},
-    {coords:{lat:31.3852, lng:-83.22299}, iconImage:icon,
-    content:"<h3>Hogzilla</h3> Alpaha, Georgia "}
+    {coords:{lat:40.3772, lng:-105.5217}, iconImage:icon, content:"<h3>The Stanley Hotel</h3> Estes Park, Colorado,"},
+    {coords:{lat:36.9859, lng:-119.2321}, iconImage:icon, content:"<h3>Big Foot Family Spotted</h3> Fresno County, California,"},
+    {coords:{lat:41.8781, lng:-87.6298}, iconImage:icon, content:"<h3>The Moth Man</h3> Chicago, Illinois"},
+    {coords:{lat:33.3703, lng:-112.5838}, iconImage:icon, content:"<h3>Stardust Ranch</h3> Buckeye, Arizona"},
+    {coords:{lat:39.3254, lng:-77.7389}, iconImage:icon, content:"<h3>Ghostly Activites</h3> Harpers Ferry, West Virginia"},
+    {coords:{lat:36.1699, lng:-115.1398}, iconImage:icon, content:"<h3>Time Warp</h3> Las Vegas, Nevada"},
+    {coords:{lat:47.6253, lng:-122.3222}, iconImage:icon, content:"<h3>A series of unfortunate events</h3> Capitol Hill, Seattle"},
+    {coords:{lat:25.7617, lng:-80.1918}, iconImage:icon, content:"<h3>Villa Paula</h3> Miami, Florida"},
+    {coords:{lat:45.5264, lng:-123.1209}, iconImage:icon, content:"<h3>Ghostly Shrieks</h3> Forest Grove, Oregon"},
+    {coords:{lat:35.2532, lng:-82.1971}, iconImage:icon, content:"<h3>Mothership Siting</h3> Columbus, North Carolina"},
+    {coords:{lat:29.4241, lng:-98.4936}, iconImage:icon, content:"<h3>Haunted Cafe</h3> San Antonio, Texas"},
+    {coords:{lat:42.5092, lng:-84.6558}, iconImage:icon, content:"<h3>Stimson Bed and Breakfast</h3> Eaton Rapids, Michigan"},
+    {coords:{lat:42.8781, lng:-73.1968}, iconImage:icon, content:"<h3>The Bennington Triangle</h3> Bennington, Vermont"},
+    {coords:{lat:40.2894, lng:-109.9432}, iconImage:icon, content:"<h3>Skinwalkers Ranch</h3> Ballard, West Utah"},
+    {coords:{lat:40.0428, lng:-86.1275}, iconImage:icon, content:"<h3>Fox Hallow Farm</h3> Westfield, Indiana"},
+    {coords:{lat:34.0522, lng:-118.2437}, iconImage:icon, content:"<h3>(Rosenheim Mansion) Murder House</h3> Los Angelos, California"},
+    {coords:{lat:41.9657, lng:-71.6745}, iconImage:icon, content:"<h3>The Conjuring</h3> Harrisville, Rhode Island"},
+    {coords:{lat:37.235, lng:-115.811111}, iconImage:icon, content:"<h3>Area 51</h3> Lincol County, Nevada"},
+    {coords:{lat:43.0389, lng:-87.9065}, iconImage:icon, content:"<h3>Slenderman</h3>Milwaukee, Wisconsin"},
+    {coords:{lat:38.8445, lng:-82.1371}, iconImage:icon, content:"<h3>The Other Monsters</h3> Point Pleasant, West Virginia"},
+    {coords:{lat:33.4942, lng:-111.9261}, iconImage:icon, content:"<h3>Ghostly Activites</h3> Scottsdale, Arizona"},
 ];
 
 //loop through markers
