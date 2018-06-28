@@ -109,6 +109,9 @@ $(document).ready(function() {
         }
         });
         map.fitBounds(bounds);
+
+        $("#location-name-input").val(""); //Clears the loc search
+
     });
 
 
